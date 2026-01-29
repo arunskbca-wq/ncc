@@ -5,41 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nisarga Nuthan Chess Club</title>
   <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      color: #222;
     }
+
     header {
       background-color: #003300;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+
     header img {
       max-height: 120px;
     }
+
     nav {
       background-color: #006600;
       display: flex;
       justify-content: center;
       padding: 10px;
     }
+
     nav a {
+      font-weight: 500;
+      font-size: 1.1em;
       color: white;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      transition: color 0.3s ease;
     }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
     section {
       padding: 20px;
     }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      color: #003300;
+      margin-bottom: 10px;
+    }
+
+    section p, section li {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    /* Tournament list styling */
+    #tournaments ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #tournaments li {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #006600;
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #e6ffe6;
+      border-left: 5px solid #003300;
+    }
+
+    #tournaments li:hover {
+      background-color: #ccffcc;
+      color: #003300;
+    }
+
+    /* Past Results table styling */
+    #results table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background-color: #ffffff;
+    }
+
+    #results th, #results td {
+      border: 1px solid #003300;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    #results th {
+      background-color: #006600;
+      color: white;
+      font-family: 'Playfair Display', serif;
+    }
+
+    #results tr:nth-child(even) {
+      background-color: #e6ffe6;
+    }
+
     footer {
       background-color: #003300;
       color: white;
       text-align: center;
       padding: 10px;
+      font-size: 0.9em;
+    }
+
+    /* Gallery images */
+    .gallery-img {
+      width: 250px;
+      height: auto;
+      margin: 10px;
+    }
+
+    /* Tournament images */
+    .tournament-img {
+      width: 300px;
+      height: auto;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -53,6 +153,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#tournaments">Tournaments</a>
+    <a href="#results">Past Results</a>
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -60,25 +161,43 @@
   <section id="about">
     <h2>About Us</h2>
     <img src="A.png" alt="TournamentPhotos" style="width:300px; height:auto;" />
-    <p>We are a passionate community of chess lovers based out of Nisarga Nuthan Layout,Bangalore. Our club hosts monthly tournaments to encourage strategic thinking, sportsmanship, and fun!</p>
+    <p class="big-text">
+  We are a passionate community of chess lovers based out of Nisarga Nuthan Layout, Bangalore. 
+  Our club hosts monthly tournaments to encourage strategic thinking, sportsmanship, and fun!
+  </p>
   </section>
 
   <section id="tournaments">
     <h2>Upcoming Tournaments</h2>
     <ul>
-      <li>February MahaShivarathri Tournament – Feb 15, 2026</li>
-      <img src="F.png" alt="TournamentPhotos" style="width:300px; height:auto;" />
-      
-      <li>March International Women's Day Tournament– Mar 8, 2026</li>
-      <img src="M.png" alt="TournamentPhotos" style="width:300px; height:auto;" />
+      <li>
+        February MahaShivarathri Tournament – Feb 15, 2026 <br>
+        <img src="F.png" alt="TournamentPhotos" class="tournament-img" />
+      </li>
+      <li>
+        March International Women's Day Tournament – Mar 8, 2026 <br>
+        <img src="M.png" alt="TournamentPhotos" class="tournament-img" />
+      </li>
     </ul>
   </section>
+
+  <section id="results">
+    <h2>Past Results</h2>
+    <table>
+      <tr>
+        <th>January Tournament</th>
+        <th>11th January</th>
+        <th>Yuvanth</th>
+        <th>Abdul Aziz</th>
+      </tr>
+    </table>
+  </section>
+
   <section id="gallery">
     <h2>Gallery</h2>
-    <img src="P2.png" alt="TournamentPhotos" style="width:250px; height:auto;" />
-    <img src="P3.png" alt="TournamentPhotos" style="width:250px; height:auto;" />
-    
-    <p>Photos from Janaury event!</p>
+    <img src="P2.png" alt="TournamentPhotos" class="gallery-img" />
+    <img src="P3.png" alt="TournamentPhotos" class="gallery-img" />
+    <p>Photos from January event!</p>
   </section>
 
   <section id="contact">
