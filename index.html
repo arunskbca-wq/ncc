@@ -10,14 +10,30 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
       color: #222;
+
+      /* Background image setup */
+      background-image: url('H.jpg'); /* replace with your image file */
+      background-size: cover;       /* cover the entire page */
+      background-repeat: no-repeat; /* no tiling */
+      background-attachment: fixed; /* stays fixed when scrolling */
+      background-position: center;  /* center the image */
+    }
+
+    /* Optional overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white overlay */
+      z-index: -1; /* keep behind content */
     }
 
     header {
-      background-color: #003300;
+      background-color: rgba(0, 51, 0, 0.9);
       color: white;
       text-align: center;
       padding: 20px;
@@ -39,7 +55,7 @@
     }
 
     nav {
-      background-color: #006600;
+      background-color: rgba(0, 102, 0, 0.9);
       display: flex;
       justify-content: center;
       padding: 10px;
@@ -128,102 +144,5 @@
     }
 
     footer {
-      background-color: #003300;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9em;
-    }
-
-    /* Gallery images */
-    .gallery-img {
-      width: 250px;
-      height: auto;
-      margin: 10px;
-    }
-
-    /* Tournament images */
-    .tournament-img {
-      width: 300px;
-      height: auto;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Nisarga Nuthan Chess Club Logo" />
-    <h1>Nisarga Nuthan Chess Club</h1>
-    <p>Monthly Chess Tournaments for Chess Enthusiasts</p>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#tournaments">Tournaments</a>
-    <a href="#results">Past Results</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <img src="A.png" alt="TournamentPhotos" style="width:300px; height:auto;" />
-    <p>We are a passionate community of chess lovers based out of Nisarga Nuthan Layout, Bangalore. Our club hosts monthly tournaments to encourage strategic thinking, sportsmanship, and fun!</p>
-  </section>
-
-  <section id="tournaments">
-    <h2>Upcoming Tournaments</h2>
-    <ul>
-      <li>
-        February MahaShivarathri Tournament – Feb 15, 2026 <br>
-        <img src="F.png" alt="TournamentPhotos" class="tournament-img" />
-      </li>
-      <li>
-        March International Women's Day Tournament – Mar 8, 2026 <br>
-        <img src="M.png" alt="TournamentPhotos" class="tournament-img" />
-      </li>
-    </ul>
-  </section>
-
-  <section id="results">
-    <h2>Past Results</h2>
-    <table>
-      <tr>
-        <th>Tournament</th>
-        <th>Date</th>
-        <th>Winner</th>
-        <th>Runner-up</th>
-      </tr>
-      <tr>
-        <td>January New Year Blitz</td>
-        <td>Jan 5, 2026</td>
-        <td>Ramesh Kumar</td>
-        <td>Priya S</td>
-      </tr>
-      <tr>
-        <td>December Winter Classic</td>
-        <td>Dec 20, 2025</td>
-        <td>Ananya Rao</td>
-        <td>Karthik M</td>
-      </tr>
-    </table>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <img src="P2.png" alt="TournamentPhotos" class="gallery-img" />
-    <img src="P3.png" alt="TournamentPhotos" class="gallery-img" />
-    <p>Photos from January event!</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: nisargachessclub@gmail.com</p>
-    <p>Location: #17 Nuthan Layout, Bukkasagara</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Nisarga Nuthan Chess Club</p>
-  </footer>
-</body>
-</html>
+      background-color: rgba(0, 51, 0, 0.9);
+     
